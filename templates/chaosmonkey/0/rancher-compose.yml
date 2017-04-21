@@ -1,0 +1,71 @@
+.catalog:
+  name: "chaos_monkey"
+  version: "v1"
+  description: "Chaos Monkey Catalog Item"
+  questions:
+    - variable: "RANCHER_URL"
+      label: "Rancher Server URL"
+      description: "Please enter the URL of Rancher Server (Example: http://rancher.io:8080)"
+      type: "string"
+      required: true
+    - variable: "RANCHER_PROJECT_ID"
+      label: "Rancher Project ID"
+      description: "Please enter the project id to use for the rancher setup(Ex: 1a5)"
+      type: "string"
+      default: "1a5"
+      required: true
+    - variable: "RANCHER_ACCESS_KEY"
+      label: "Rancher Access Key"
+      description: "Access Key for Rancher Server"
+      required: true
+      default: "access-key"
+      type: "string"
+    - variable: "RANCHER_SECRET_KEY"
+      label: "Rancher Secret Key"
+      description: "Secret Key for Rancher Server"
+      required: true
+      default: "secret-key"
+    - variable: "START_CLUSTER_SIZE"
+      label: "Start Cluster Size"
+      description: "This is the initial number of hosts in the cluster before start of tests"
+      type: "int"
+      default: 10
+    - variable: "MIN_CLUSTER_SIZE"
+      label: "Minimum Cluster Size"
+      description: "This is the minimum number of hosts to be maintained in the cluster after tests begin"
+      type: "int"
+      default: 5
+      required: true
+    - variable: "MAX_CLUSTER_SIZE"
+      label: "Maximum Cluster Size"
+      description: "This is the maximum number of hosts allowed in the cluster after tests begin"
+      type: "int"
+      default: 15
+      required: true
+    - variable: "MIN_WAIT_TIME"
+      label: "Minimum Wait Time"
+      description: "Minimum amount of time to wait before running the next test (in seconds)"
+      type: "int"
+      default: 420
+      required: true
+    - variable: "MAX_WAIT_TIME"
+      label: "Maximum Wait Time"
+      description: "Maximum amount of time before running the next test (in seconds)"
+      type: "int"
+      default: 1020
+      required: true
+    - variable: "SEED"
+      label: "Seed value"
+      description: "Seed value for random number generator"
+      type: "int"
+    - variable: "DO_ACCESS_TOKEN"
+      label: "Digitalocean Access Token"
+      description: "Digitalocean Access token"
+      required: true
+      default: "dotoken"
+    - variable: "RANCHER_DEBUG"
+      label: "Enable Debug Logs"
+      description: "This will enable very verbose debug logs."
+      type: "boolean"
+      default: "false"
+      required: true

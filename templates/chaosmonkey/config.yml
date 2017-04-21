@@ -1,0 +1,5 @@
+name: chaos_monkey
+description: |
+  Chaos Monkey Catalog Item
+version: v1.0
+category: Test
