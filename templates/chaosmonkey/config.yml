@@ -1,5 +1,5 @@
-name: chaos_monkey
+name: Chaos Monkey
 description: |
-  Chaos Monkey Catalog Item
-version: v1.0
+  I am here to bring "CHAOS" to the world!
+version: dev
 category: Test

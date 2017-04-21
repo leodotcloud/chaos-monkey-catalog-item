@@ -1,5 +1,5 @@
 chaosmonkey:
-    image: leodotcloud/chaos-monkey:dev
+    image: leodotcloud/chaos-monkey
     tty: true
     command:
         - chaos-monkey

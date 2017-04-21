@@ -1,5 +1,5 @@
 .catalog:
-  version: "dev"
+  version: "v1.0"
   questions:
     - variable: "RANCHER_URL"
       label: "Rancher Server URL"
