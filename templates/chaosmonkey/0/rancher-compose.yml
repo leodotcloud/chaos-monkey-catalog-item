@@ -28,6 +28,7 @@
       label: "Start Cluster Size"
       description: "This is the initial number of hosts in the cluster before start of tests"
       type: "int"
+      required: true
       default: 10
     - variable: "MIN_CLUSTER_SIZE"
       label: "Minimum Cluster Size"
