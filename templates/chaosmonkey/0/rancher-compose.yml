@@ -1,6 +1,6 @@
 .catalog:
   name: "chaos_monkey"
-  version: "v1"
+  version: "v1.0"
   description: "Chaos Monkey Catalog Item"
   questions:
     - variable: "RANCHER_URL"
