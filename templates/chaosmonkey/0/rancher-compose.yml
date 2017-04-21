@@ -25,6 +25,7 @@
       description: "Secret Key for Rancher Server"
       required: true
       default: "secret-key"
+      type: "string"
     - variable: "START_CLUSTER_SIZE"
       label: "Start Cluster Size"
       description: "This is the initial number of hosts in the cluster before start of tests"
@@ -63,6 +64,7 @@
       description: "Digitalocean Access token"
       required: true
       default: "dotoken"
+      type: "string"
     - variable: "RANCHER_DEBUG"
       label: "Enable Debug Logs"
       description: "This will enable very verbose debug logs."
