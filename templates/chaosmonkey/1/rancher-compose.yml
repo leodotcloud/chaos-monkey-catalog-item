@@ -10,19 +10,15 @@
       label: "Rancher Project ID"
       description: "Please enter the project id to use for the rancher setup(Ex: 1a5)"
       type: "string"
-      default: "1a5"
-      required: true
     - variable: "RANCHER_ACCESS_KEY"
       label: "Rancher Access Key"
       description: "Access Key for Rancher Server"
       required: true
-      default: "access-key"
       type: "string"
     - variable: "RANCHER_SECRET_KEY"
       label: "Rancher Secret Key"
       description: "Secret Key for Rancher Server"
       required: true
-      default: "secret-key"
       type: "password"
     - variable: "START_CLUSTER_SIZE"
       label: "Start Cluster Size"
