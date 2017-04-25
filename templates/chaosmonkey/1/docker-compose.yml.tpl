@@ -1,12 +1,23 @@
 chaosmonkey:
     image: leodotcloud/chaos-monkey
     tty: true
+    labels:
+        io.rancher.container.create_agent: "true"
+        io.rancher.container.agent.role: environmentAdmin
     command:
         - chaos-monkey
-        - --rancher-url=${RANCHER_URL}
+        {{- if (ne .Values.CATTLE_URL "") }}
+        - --rancher-url=${CATTLE_URL}
+        {{- end}}
+        {{- if (ne .Values.RANCHER_PROJECT_ID "") }}
         - --rancher-project-id=${RANCHER_PROJECT_ID}
-        - --rancher-access-key=${RANCHER_ACCESS_KEY}
-        - --rancher-secret-key=${RANCHER_SECRET_KEY}
+        {{- end}}
+        {{- if (ne .Values.CATTLE_ACCESS_KEY "") }}
+        - --rancher-access-key=${CATTLE_ACCESS_KEY}
+        {{- end}}
+        {{- if (ne .Values.CATTLE_SECRET_KEY "") }}
+        - --rancher-secret-key=${CATTLE_SECRET_KEY}
+        {{- end}}
         {{- if (eq.Values.USE_DIGITALOCEAN "true") }}
         - --use-digitalocean
         - --digitalocean-access-token=${DO_ACCESS_TOKEN}
